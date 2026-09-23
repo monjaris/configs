@@ -1,0 +1,6 @@
+[Shortcuts]
+KisToolTransform=T
+KritaTransform/KisToolMove=M
+edit_redo=Ctrl+Y
+mirror_canvas=;\s
+softProof=none

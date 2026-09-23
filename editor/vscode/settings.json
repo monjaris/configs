@@ -1,0 +1,127 @@
+{
+    ///  Window
+    "window.commandCenter": false,
+    "window.zoomPerWindow": false,
+    "window.customMenuBarAltFocus": false,
+    "window.enableMenuBarMnemonics": false,
+    "window.autoDetectColorScheme": true,
+
+    ///  Editor
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "editor.fontSize": 16,
+    "editor.fontWeight": "500",
+    "editor.lineHeight": 1.4,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.autoIndentOnPaste": true,
+    "editor.multiCursorPaste": "full",
+    "editor.multiCursorLimit": 25000,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.fontLigatures": true,
+    "editor.renderLineHighlight": "all",
+    "editor.minimap.enabled": false,
+    "editor.colorDecoratorsActivatedOn": "click",
+    "editor.colorDecoratorsLimit": 1500,
+    "editor.defaultColorDecorators": "always",
+
+    ///  Workbench
+    "workbench.activityBar.location": "hidden",
+    "workbench.activityBar.iconClickBehavior": "focus",
+    "workbench.layoutControl.enabled": false,
+
+    ///  Files
+    "files.exclude": { "**/.git": false },
+    "files.associations": { "*.myconfig": "json"},
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 25,
+    "files.simpleDialog.enable": true,
+
+
+    ///  Terminal
+    "terminal.integrated.fontFamily": "Cascadia Code NF",
+    "terminal.integrated.fontLigatures.enabled": true,
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontWeight": "500",
+    "terminal.integrated.fontWeightBold": "600",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorWidth": 1,
+    "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.letterSpacing": 1,
+    "terminal.integrated.scrollback": 1000000,
+    "terminal.integrated.fastScrollSensitivity": 3,
+    "terminal.integrated.allowMnemonics": false,
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.hideOnStartup": "always",
+
+
+    ///  C/C++
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.intelliSenseMode": "linux-clang-x64",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "C_Cpp.intelliSenseUpdateDelay": 500,
+    "C_Cpp.intelliSenseCacheSize": 5120,
+    "C_Cpp.intelliSenseMemoryLimit": 4096,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.inactiveRegionOpacity": 0.6,
+    "C_Cpp.renameRequiresIdentifier": false,
+    "cmake.configureOnOpen": false,
+
+
+    ///  Misc
+    "telemetry.telemetryLevel": "off",
+    "extensions.ignoreRecommendations": true,
+    "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "debug.onTaskErrors": "abort",
+    "debug.terminal.clearBeforeReusing": true,
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+    "window.newWindowDimensions": "fullscreen",
+    "terminal.integrated.cursorStyle": "line",
+    "window.restoreFullscreen": true,
+    "chat.viewSessions.orientation": "stacked",
+    "editor.cursorWidth": 2,
+    "editor.cursorStyle": "block",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "window.zoomLevel": 1,
+    "clangd.detectExtensionConflicts": false,
+    "json.schemaDownload.trustedDomains": {
+        "https://developer.microsoft.com/json-schemas/": true,
+        "https://json-schema.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://raw.githubusercontent.com/devcontainers/spec/": true,
+        "https://raw.githubusercontent.com/microsoft/vscode/": true,
+        "https://schemastore.azurewebsites.net/": true,
+        "https://www.schemastore.org/": true,
+        "https://zed.dev": true
+    },
+
+    // "editor.tokenColorCustomizations": {
+    //     "[One Dark Pro Night Flat]": {
+    //         "types": "#FF0000",
+    //         "functions": "#0073ff",
+    //         "comments": "#898d8a",
+    //         "keywords": "#c905d4",
+    //         "numbers": "#a7ff77",
+    //         "strings": "#83f869",
+    //         "variables": "#ebfdff",
+    //     },
+    // },
+
+    // "editor.semanticTokenColorCustomizations": {
+    //     "[One Dark Pro Night Flat]": {
+    //         "enabled": true,
+    //         "rules": {
+    //             "macro": "#ff0000"
+    //         }
+    //     }
+    // }
+}

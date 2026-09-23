@@ -1,0 +1,9 @@
+[8cd27055-d39b-4ef0-a701-62a7aa2ff813]
+Description=Launch new application windows with certain transparency
+opacityactive=90
+opacityactiverule=2
+opacityinactive=80
+opacityinactiverule=2
+
+[General]
+rules=

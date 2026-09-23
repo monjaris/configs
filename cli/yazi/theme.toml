@@ -1,0 +1,2 @@
+[manager]
+cwd = { fg = "blue", bold = true }

@@ -1,0 +1,15 @@
+[ElisaFileIndexer]
+RootPath[$e]=$HOME/Music
+
+[Shortcuts]
+NextTrack=Ctrl+Right; >
+Play-Pause=Space;\s
+PreviousTrack=Ctrl+Left; <
+Scrub=Left
+Seek=Right
+edit_find=Ctrl+F; /
+togglePartyMode=Ctrl+Shift+P
+toggle_playlist=Ctrl+P
+
+[UiSettings]
+ColorScheme=Main

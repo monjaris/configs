@@ -1,0 +1,1127 @@
+{
+  "version": 2,
+  "theme": "main.json",
+  "check_for_updates": false,
+  "editor": {
+    "tab_size": 4,
+    "line_numbers": true,
+    "relative_line_numbers": false,
+    "scroll_offset": 5,
+    "wrap_column": 100,
+    "estimated_line_length": 100,
+    "diagnostics_inline_text": true,
+    "auto_save_enabled": true,
+    "auto_save_interval_secs": 0,
+    "mouse_hover_delay_ms": 400,
+    "double_click_time_ms": 400,
+    "ensure_final_newline_on_save": true,
+    "cursor_style": "default",
+    "completion_popup_auto_show": true,
+    "quick_suggestions_delay_ms": 100,
+    "show_menu_bar": false,
+    "show_status_bar": true,
+    "show_prompt_line": false,
+    "show_vertical_scrollbar": false,
+    "show_horizontal_scrollbar": false,
+    "show_tilde": true,
+    "use_terminal_bg": false,
+    "whitespace_spaces_leading": false,
+    "whitespace_tabs_leading": true,
+    "whitespace_tabs_inner": true,
+    "whitespace_show": true,
+    "cursor_jump_animation": true,
+    "whitespace_spaces_trailing": true,
+    "line_wrap": false
+  },
+  "file_explorer": {
+    "respect_gitignore": false,
+    "show_hidden": true,
+    "show_gitignored": true,
+    "width": "24%"
+  },
+  "file_browser": {
+    "show_hidden": true
+  },
+
+
+
+  "keybindings": [
+    {
+      "key": "r",
+      "modifiers": ["alt"],
+      "action": "file_explorer_rename",
+      "when": "file_explorer"
+    },
+    {
+      "key": "e",
+      "modifiers": ["ctrl"],
+      "action": "focus_editor",
+      "when": "file_explorer"
+    },
+    {
+      "key": "w",
+      "modifiers": ["ctrl"],
+      "action": "close_tab",
+      "when": "normal"
+    },
+    {
+      "key": "k",
+      "modifiers": ["alt"],
+      "action": "prev_buffer",
+      "when": "normal"
+    },
+    {
+      "key": "l",
+      "modifiers": ["alt"],
+      "action": "next_buffer",
+      "when": "normal"
+    },
+    {
+      "key": "i",
+      "modifiers": ["alt"],
+      "action": "lsp_hover",
+      "when": "normal"
+    },
+    {
+      "key": "o",
+      "modifiers": ["alt"],
+      "action": "close_tab",
+      "when": "normal"
+    },
+    {
+      "key": "d",
+      "modifiers": ["ctrl", "alt"],
+      "action": "duplicate_line",
+      "when": "normal"
+    },
+    {
+      "key": "k",
+      "modifiers": ["ctrl", "alt"],
+      "action": "open_keybinding_editor",
+      "when": "normal"
+    },
+    {
+      "key": ",",
+      "modifiers": ["alt"],
+      "action": "command_palette",
+      "when": "normal"
+    },
+    {
+      "key": "k",
+      "modifiers": ["ctrl"],
+      "action": "cut",
+      "when": "normal"
+    },
+    {
+      "key": "x",
+      "modifiers": ["ctrl"],
+      "action": "Quit",
+      "when": "normal"
+    },
+    {
+      "key": "s",
+      "modifiers": ["ctrl", "alt"],
+      "action": "open_settings",
+      "when": "normal"
+    },
+    {
+      "key": "f",
+      "modifiers": ["alt"],
+      "action": "find_next",
+      "when": "normal"
+    },
+    {
+      "key": "g",
+      "modifiers": ["alt"],
+      "action": "find_prev",
+      "when": "normal"
+    },
+    {
+      "key": "Enter",
+      "modifiers": ["shift"],
+      "action": "insert_newline",
+      "when": "normal"
+    },
+    {
+      "key": "f",
+      "modifiers": ["ctrl", "alt"],
+      "action": "find_selection_next",
+      "when": "mode:vi-visual-line"
+    },
+    {
+      "key": "p",
+      "modifiers": ["ctrl"],
+      "action": "open",
+      "when": "normal"
+    },
+    {
+      "key": "/",
+      "modifiers": ["alt"],
+      "action": "next_split",
+      "when": "normal"
+    },
+    {
+      "key": ",",
+      "modifiers": ["alt"],
+      "action": "quick_open",
+      "when": "global"
+    },
+    {
+      "key": "[",
+      "modifiers": ["alt"],
+      "action": "close_terminal",
+      "when": "terminal"
+    },
+    {
+      "key": "/",
+      "modifiers": ["ctrl", "alt"],
+      "action": "shell_command",
+      "when": "normal"
+    },
+    {
+      "key": "d",
+      "modifiers": ["alt"],
+      "action": "lsp_goto_definition",
+      "when": "normal"
+    },
+    {
+      "key": "o",
+      "modifiers": ["alt"],
+      "action": "close_tab",
+      "when": "global"
+    }
+  ],
+  "active_keybinding_map": "vscode",
+
+
+
+  "default_language": "markdown",
+  "lsp": {
+    "c": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "toml": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "yaml": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "cpp": {
+      "enabled": true,
+      "auto_start": true,
+      "root_markers": ["compile_commands.json", "CMakeLists.txt", "Makefile", ".git", "xmake.lua"],
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "rust": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "bash": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "markdown": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "json": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "go": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "lua": {
+      "enabled": false,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    }
+  },
+  "universal_lsp": {
+    "clangd": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    }
+  },
+  "plugins": {
+    "vi_mode": {
+      "enabled": false,
+      "settings": {
+        "autoStart": false,
+        "arrowKeys": true,
+        "searchWordUnderCursor": false
+      }
+    }
+  },
+  "languages": {
+    "go": {
+      "auto_indent": true,
+      "comment_prefix": "//",
+      "extensions": ["go"],
+      "format_on_save": false,
+      "formatter": {
+        "command": "gofmt",
+        "args": [],
+        "stdin": true,
+        "timeout_ms": 10000
+      },
+      "grammar": "go",
+      "show_whitespace_tabs": false,
+      "tab_size": 4,
+      "use_tabs": false
+    },
+    "asm": {
+      "extensions": ["asm", "nasm"],
+      "grammar": "Assembly",
+      "comment_prefix": ";",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "astro": {
+      "extensions": ["astro"],
+      "grammar": "Astro",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "bash": {
+      "extensions": ["sh", "bash"],
+      "filenames": [".bash_aliases", ".bash_logout", ".bash_profile", ".bashrc", ".env", ".profile", ".zlogin", ".zlogout", ".zprofile", ".zshenv", ".zshrc", "PKGBUILD", "APKBUILD"],
+      "grammar": "bash",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "c": {
+      "extensions": ["c", "h"],
+      "grammar": "c",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "formatter": {
+        "command": "clang-format",
+        "args": [],
+        "stdin": true,
+        "timeout_ms": 10000
+      },
+      "format_on_save": false
+    },
+    "c3": {
+      "extensions": ["c3", "c3i", "c3t"],
+      "grammar": "c3",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "clojure": {
+      "extensions": ["clj", "cljs", "cljc", "edn"],
+      "grammar": "Clojure",
+      "comment_prefix": ";",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "cmake": {
+      "extensions": ["cmake"],
+      "filenames": ["CMakeLists.txt"],
+      "grammar": "CMake",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "cpp": {
+      "extensions": ["cpp", "cc", "cxx", "hpp", "hh", "hxx"],
+      "grammar": "cpp",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "formatter": {
+        "command": "clang-format",
+        "args": [],
+        "stdin": true,
+        "timeout_ms": 10000
+      },
+      "format_on_save": false
+    },
+    "csharp": {
+      "extensions": ["cs"],
+      "grammar": "C#",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "css": {
+      "extensions": ["css"],
+      "grammar": "CSS",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "cuda": {
+      "extensions": ["cu", "cuh"],
+      "grammar": "CUDA",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "dart": {
+      "extensions": ["dart"],
+      "grammar": "Dart",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "dockerfile": {
+      "extensions": ["dockerfile"],
+      "filenames": ["Dockerfile", "Containerfile"],
+      "grammar": "dockerfile",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "earthfile": {
+      "extensions": ["earth"],
+      "filenames": ["Earthfile"],
+      "grammar": "Earthfile",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "elixir": {
+      "extensions": ["ex", "exs"],
+      "grammar": "Elixir",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "erlang": {
+      "extensions": ["erl", "hrl"],
+      "grammar": "Erlang",
+      "comment_prefix": "%",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "fish": {
+      "extensions": ["fish"],
+      "grammar": "fish",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "fortran": {
+      "extensions": ["f", "for", "ftn", "f77", "f90", "f95", "f03", "f08"],
+      "grammar": "Fortran",
+      "comment_prefix": "!",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "fsharp": {
+      "extensions": ["fs", "fsi", "fsx"],
+      "grammar": "FSharp",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "gas": {
+      "extensions": ["s", "S"],
+      "grammar": "Assembly",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "gdscript": {
+      "extensions": ["gd"],
+      "grammar": "gdscript",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "git-commit": {
+      "filenames": ["COMMIT_EDITMSG", "MERGE_MSG", "SQUASH_MSG", "TAG_EDITMSG"],
+      "grammar": "Git Commit Message",
+      "comment_prefix": "#",
+      "auto_indent": false,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "git-rebase": {
+      "filenames": ["git-rebase-todo"],
+      "grammar": "Git Rebase Todo",
+      "comment_prefix": "#",
+      "auto_indent": false,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "gitattributes": {
+      "extensions": ["gitattributes"],
+      "filenames": [".gitattributes"],
+      "grammar": "Git Attributes",
+      "comment_prefix": "#",
+      "auto_indent": false,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "gitconfig": {
+      "extensions": ["gitconfig"],
+      "filenames": [".gitconfig", ".gitmodules"],
+      "grammar": "Git Config",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "gitignore": {
+      "extensions": ["gitignore"],
+      "filenames": [".gitignore", ".dockerignore", ".npmignore", ".hgignore"],
+      "grammar": "Gitignore",
+      "comment_prefix": "#",
+      "auto_indent": false,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "gleam": {
+      "extensions": ["gleam"],
+      "grammar": "Gleam",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "glsl": {
+      "extensions": ["glsl", "vert", "frag", "geom", "tesc", "tese", "comp", "rgen", "rint", "rahit", "rchit", "rmiss", "rcall"],
+      "grammar": "glsl",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "gomod": {
+      "filenames": ["go.mod", "go.sum"],
+      "grammar": "Go Module",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "use_tabs": true,
+      "format_on_save": false
+    },
+    "graphql": {
+      "extensions": ["graphql", "gql"],
+      "grammar": "GraphQL",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "haskell": {
+      "extensions": ["hs", "lhs"],
+      "grammar": "Haskell",
+      "comment_prefix": "--",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "hip": {
+      "extensions": ["hip"],
+      "grammar": "HIP",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "hlsl": {
+      "extensions": ["hlsl", "hlsli", "fx", "fxh"],
+      "grammar": "hlsl",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "html": {
+      "extensions": ["html", "htm"],
+      "grammar": "HTML",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "hyprlang": {
+      "extensions": ["hl"],
+      "filenames": ["hyprland.conf"],
+      "grammar": "Hyprlang",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "ini": {
+      "extensions": ["ini", "cfg"],
+      "grammar": "INI",
+      "comment_prefix": ";",
+      "auto_indent": false,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "java": {
+      "extensions": ["java"],
+      "grammar": "java",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "javascript": {
+      "extensions": ["js", "jsx", "mjs"],
+      "grammar": "javascript",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "formatter": {
+        "command": "prettier",
+        "args": ["--stdin-filepath", "$FILE"],
+        "stdin": true,
+        "timeout_ms": 10000
+      },
+      "format_on_save": false
+    },
+    "json": {
+      "extensions": ["json"],
+      "grammar": "json",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "formatter": {
+        "command": "prettier",
+        "args": ["--stdin-filepath", "$FILE"],
+        "stdin": true,
+        "timeout_ms": 10000
+      },
+      "format_on_save": false
+    },
+    "jsonc": {
+      "extensions": ["jsonc"],
+      "filenames": ["devcontainer.json", ".devcontainer.json", "tsconfig.json", "tsconfig.*.json", "jsconfig.json", "jsconfig.*.json", ".eslintrc.json", ".babelrc", ".babelrc.json", ".swcrc", ".jshintrc", ".hintrc", "settings.json", "keybindings.json", "tasks.json", "launch.json", "extensions.json", "argv.json"],
+      "grammar": "jsonc",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "formatter": {
+        "command": "prettier",
+        "args": ["--stdin-filepath", "$FILE"],
+        "stdin": true,
+        "timeout_ms": 10000
+      },
+      "format_on_save": false
+    },
+    "julia": {
+      "extensions": ["jl"],
+      "grammar": "Julia",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "justfile": {
+      "filenames": ["justfile", "Justfile", ".justfile"],
+      "grammar": "Justfile",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "use_tabs": true,
+      "format_on_save": false
+    },
+    "kdl": {
+      "extensions": ["kdl"],
+      "grammar": "KDL",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "kotlin": {
+      "extensions": ["kt", "kts"],
+      "grammar": "Kotlin",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "latex": {
+      "extensions": ["tex", "latex", "ltx", "sty", "cls", "bib"],
+      "grammar": "latex",
+      "comment_prefix": "%",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "less": {
+      "extensions": ["less"],
+      "grammar": "LESS",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "llvm-ir": {
+      "extensions": ["ll"],
+      "grammar": "LLVM IR",
+      "comment_prefix": ";",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "lua": {
+      "extensions": ["lua"],
+      "grammar": "Lua",
+      "comment_prefix": "--",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "m4": {
+      "extensions": ["m4", "ac"],
+      "grammar": "M4",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "makefile": {
+      "extensions": ["mk"],
+      "filenames": ["Makefile", "makefile", "GNUmakefile"],
+      "grammar": "Makefile",
+      "comment_prefix": "#",
+      "auto_indent": false,
+      "show_whitespace_tabs": true,
+      "use_tabs": true,
+      "tab_size": 8,
+      "format_on_save": false
+    },
+    "markdown": {
+      "extensions": ["md", "markdown"],
+      "filenames": ["README"],
+      "grammar": "markdown",
+      "auto_indent": false,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "metal": {
+      "extensions": ["metal"],
+      "grammar": "Metal",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "mlir": {
+      "extensions": ["mlir"],
+      "grammar": "MLIR",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "nim": {
+      "extensions": ["nim", "nims", "nimble"],
+      "grammar": "Nim",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "nix": {
+      "extensions": ["nix"],
+      "grammar": "Nix",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "nushell": {
+      "extensions": ["nu"],
+      "grammar": "Nushell",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "ocaml": {
+      "extensions": ["ml", "mli"],
+      "grammar": "OCaml",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "odin": {
+      "extensions": ["odin"],
+      "grammar": "odin",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": false,
+      "use_tabs": true,
+      "tab_size": 8,
+      "format_on_save": false
+    },
+    "pbxproj": {
+      "extensions": ["pbxproj"],
+      "filenames": ["project.pbxproj"],
+      "grammar": "Xcode Project",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "perl": {
+      "extensions": ["pl", "pm", "t"],
+      "grammar": "Perl",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "php": {
+      "extensions": ["php", "phtml"],
+      "grammar": "PHP",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "po": {
+      "extensions": ["po", "pot"],
+      "grammar": "Gettext PO",
+      "comment_prefix": "#",
+      "auto_indent": false,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "powershell": {
+      "extensions": ["ps1", "psm1", "psd1"],
+      "grammar": "PowerShell",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "protobuf": {
+      "extensions": ["proto"],
+      "grammar": "Protocol Buffers",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "python": {
+      "extensions": ["py", "pyi"],
+      "grammar": "python",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "formatter": {
+        "command": "ruff",
+        "args": ["format", "--stdin-filename", "$FILE"],
+        "stdin": true,
+        "timeout_ms": 10000
+      },
+      "format_on_save": false
+    },
+    "r": {
+      "extensions": ["r", "R", "rmd"],
+      "grammar": "R",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "racket": {
+      "extensions": ["rkt", "rktd", "rktl", "scrbl"],
+      "grammar": "Racket",
+      "comment_prefix": ";",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "ruby": {
+      "extensions": ["rb", "rake", "gemspec"],
+      "filenames": ["Gemfile", "Rakefile", "Guardfile"],
+      "grammar": "Ruby",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "rust": {
+      "extensions": ["rs"],
+      "grammar": "rust",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "formatter": {
+        "command": "rustfmt",
+        "args": ["--edition", "2021"],
+        "stdin": true,
+        "timeout_ms": 10000
+      },
+      "format_on_save": false
+    },
+    "scala": {
+      "extensions": ["scala", "sc"],
+      "grammar": "Scala",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "scss": {
+      "extensions": ["scss"],
+      "grammar": "SCSS",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "slang": {
+      "extensions": ["slang"],
+      "grammar": "slang",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "smali": {
+      "extensions": ["smali"],
+      "grammar": "Smali",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "solidity": {
+      "extensions": ["sol"],
+      "grammar": "Solidity",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "sql": {
+      "extensions": ["sql"],
+      "grammar": "SQL",
+      "comment_prefix": "--",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "starlark": {
+      "extensions": ["bzl", "star"],
+      "filenames": ["BUILD", "WORKSPACE"],
+      "grammar": "Starlark",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "svelte": {
+      "extensions": ["svelte"],
+      "grammar": "Svelte",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "swift": {
+      "extensions": ["swift"],
+      "grammar": "Swift",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "systemverilog": {
+      "extensions": ["sv", "svh", "svi", "svp"],
+      "grammar": "SystemVerilog",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "templ": {
+      "extensions": ["templ"],
+      "grammar": "go",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "terraform": {
+      "extensions": ["tf", "tfvars", "hcl"],
+      "grammar": "HCL",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "toml": {
+      "extensions": ["toml"],
+      "filenames": ["Cargo.lock"],
+      "grammar": "toml",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "typescript": {
+      "extensions": ["ts", "tsx", "mts"],
+      "grammar": "typescript",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "formatter": {
+        "command": "prettier",
+        "args": ["--stdin-filepath", "$FILE"],
+        "stdin": true,
+        "timeout_ms": 10000
+      },
+      "format_on_save": false
+    },
+    "typst": {
+      "extensions": ["typ"],
+      "grammar": "Typst",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "verilog": {
+      "extensions": ["vh", "verilog"],
+      "grammar": "Verilog",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "vhdl": {
+      "extensions": ["vhd", "vhdl", "vho"],
+      "grammar": "VHDL",
+      "comment_prefix": "--",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "vlang": {
+      "extensions": ["v", "vv"],
+      "grammar": "V",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "vue": {
+      "extensions": ["vue"],
+      "grammar": "Vue",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "wgsl": {
+      "extensions": ["wgsl"],
+      "grammar": "wgsl",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    },
+    "yaml": {
+      "extensions": ["yml", "yaml"],
+      "grammar": "yaml",
+      "comment_prefix": "#",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "formatter": {
+        "command": "prettier",
+        "args": ["--stdin-filepath", "$FILE"],
+        "stdin": true,
+        "timeout_ms": 10000
+      },
+      "format_on_save": false
+    },
+    "zig": {
+      "extensions": ["zig", "zon"],
+      "grammar": "zig",
+      "comment_prefix": "//",
+      "auto_indent": true,
+      "show_whitespace_tabs": true,
+      "format_on_save": false
+    }
+  },
+  "self_update": false
+}

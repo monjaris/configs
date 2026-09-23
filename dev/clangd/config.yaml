@@ -1,0 +1,38 @@
+---
+If:
+  PathMatch: .*\\.(cpp|cc|cxx|hpp|hxx)
+CompileFlags:
+  Add: [-std=c++23, -Wall, -Wextra]
+  Remove: [-mno-direct-extern-access]
+---
+If:
+  PathMatch: .*\\.(c|h)
+CompileFlags:
+  Add: [-std=c11, -Wall, -Wextra]
+---
+
+
+InlayHints:
+  ParameterNames: No
+  DeducedTypes: No
+  Designators: No
+
+Diagnostics:
+  UnusedIncludes: None
+  ClangTidy:
+    Remove: [modernize-use-trailing-return-type]
+
+Completion:
+  ArgumentLists: Delimiters
+  AllScopes: No
+  HeaderInsertion: Never
+  CodePatterns: None
+  Style: Detailed
+
+Index:
+  Background: Build
+  StandardLibrary: Yes
+
+Hover:
+  ShowAKA: Yes
+

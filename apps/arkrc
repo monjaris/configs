@@ -1,0 +1,14 @@
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[MainWindow]
+MenuBar=Disabled
+StatusBar=Disabled
+splitterSizes=1592,152
+
+[Preview]
+previewFileSizeLimit=500
+
+[Viewer]
+StatusBar=Disabled

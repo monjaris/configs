@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=yakuake-daemon
+Comment=Autostart yakuake or restart if it is closed
+GenericName=Drop-down Terminal
+Categories=Qt;KDE;System;TerminalEmulator;
+Exec=bash -c 'while true; do if ! pgrep -x yakuake; then yakuake; sleep 3; fi; done'
+Icon=yakuake
+Terminal=false
+DBusActivatable=true
+Type=Application

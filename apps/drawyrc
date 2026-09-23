@@ -1,0 +1,10 @@
+[AutoSave]
+Path[$e]=$HOME/.cache/drawy/drawy.autosavep
+
+[Properties]
+FontSize=40
+StrokeWidth=2
+
+[Session]
+LastSavedFile=
+LastSavedFileModified=false

@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+
+source ~/.config/bashrc.d/constants.sh
+
+CWD="$(pwd)"
+NEW="${1}"
+TEMPLATE_DIR="${HOME}/Templates/c++/"
+
+###
+
+if [ "${NEW}" = "" ]; then
+    echo "${BRED}:: Can not provide empty argument!${CLR0}"
+    exit 1
+fi
+
+printf "${BCYAN}:: Initializing C++ project\n${CLR0}"
+
+###
+
+if [ -d "${NEW}" ]; then
+    echo "${BRED}:: Directory already exists!${CLR0}"
+    exit 1
+fi
+
+
+cp -r "${TEMPLATE_DIR/}" "${CWD}/${NEW}"
+
+find "${NEW}" -type f -exec \
+    sed -i "s/__pini__/${NEW}/g" {} +
+
+###
+
+printf "${BGREEN}:: Initial setting up..\n${CLR0}"
+cd "${CWD}/${NEW}"
+xmake project -k compile_commands > /dev/null

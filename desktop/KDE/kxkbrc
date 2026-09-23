@@ -1,0 +1,7 @@
+[Layout]
+DisplayNames=,,
+LayoutList=us,az,ru
+Options=grp:alt_caps_toggle
+ResetOldOptions=true
+Use=true
+VariantList=,,

@@ -1,0 +1,97 @@
+# Global clang-tidy config for Monako and related projects.
+# Intended to be referenced explicitly via `--config-file=`, since clang-tidy's
+# own directory-walk for `.clang-tidy` does not reliably fall back to a home
+# directory copy — see usage notes below the file.
+
+Checks: >
+  -*,
+  google-explicit-constructor,
+  readability-identifier-naming
+
+# google-explicit-constructor has no configurable options — it just flags
+# single-argument (and effectively-single-argument, e.g. all-but-one-defaulted)
+# constructors and conversion operators that aren't marked explicit.
+
+CheckOptions:
+  # --- #3: types are PascalCase ---
+  - key: readability-identifier-naming.ClassCase
+    value: CamelCase          # clang-tidy's "CamelCase" == PascalCase (UpperCamelCase). "camelBack" is the lowerCamelCase one.
+  - key: readability-identifier-naming.StructCase
+    value: CamelCase
+  - key: readability-identifier-naming.EnumCase
+    value: CamelCase
+  - key: readability-identifier-naming.UnionCase
+    value: CamelCase
+  - key: readability-identifier-naming.TypeAliasCase
+    value: CamelCase
+  - key: readability-identifier-naming.TypedefCase
+    value: CamelCase
+  - key: readability-identifier-naming.TemplateParameterCase
+    value: CamelCase
+
+  # --- #4: variables and non-constexpr consts are snake_case ---
+  - key: readability-identifier-naming.VariableCase
+    value: lower_case
+  - key: readability-identifier-naming.LocalVariableCase
+    value: lower_case
+  - key: readability-identifier-naming.ParameterCase
+    value: lower_case
+  - key: readability-identifier-naming.GlobalVariableCase
+    value: lower_case
+  # Plain `const` (runtime-determined, not constexpr) — same snake_case bucket.
+  # clang-tidy distinguishes const from constexpr via separate *Constant* and
+  # *ConstexprVariable* option families; leaving ConstexprVariableCase unset
+  # deliberately (see note below) means constexprs fall through to VariableCase
+  # too unless you set them explicitly — add a ConstexprVariableCase entry
+  # below if you want constexprs cased differently than plain const/non-const.
+  - key: readability-identifier-naming.ConstantCase
+    value: lower_case
+  - key: readability-identifier-naming.LocalConstantCase
+    value: lower_case
+  - key: readability-identifier-naming.GlobalConstantCase
+    value: lower_case
+  - key: readability-identifier-naming.MemberConstantCase
+    value: lower_case
+
+  # If/when you want constexpr to be visually distinct (e.g. SCREAMING_CASE),
+  # uncomment and set independently — as written, constexpr values are NOT
+  # forced into any special case, so they'll just inherit whatever the
+  # matching Variable/Constant rule above says, per your "not constexprs" ask
+  # being about exemption rather than a different required case:
+  # - key: readability-identifier-naming.ConstexprVariableCase
+  #   value: UPPER_CASE
+
+  # --- #5: member methods camelCase, static methods PascalCase ---
+  - key: readability-identifier-naming.MethodCase
+    value: camelBack           # instance methods: camelCase
+  - key: readability-identifier-naming.ClassMethodCase
+    value: CamelCase           # static member functions: PascalCase
+  - key: readability-identifier-naming.FunctionCase
+    value: camelBack           # free functions default to camelCase too; override per-project if needed
+
+  # --- #1: private members prefixed m_ (with `impl` hand-exempted via NOLINT) ---
+  - key: readability-identifier-naming.PrivateMemberCase
+    value: lower_case
+  - key: readability-identifier-naming.PrivateMemberPrefix
+    value: m_
+  - key: readability-identifier-naming.ProtectedMemberCase
+    value: lower_case
+  - key: readability-identifier-naming.ProtectedMemberPrefix
+    value: m_
+  # Public members intentionally left unset/no-prefix — adjust if you want
+  # m_ enforced there too.
+
+# --- google-explicit-constructor exception knob ---
+# There is no built-in per-name exemption. For the one legitimate case you'll
+# have (a private member literally named `impl`, e.g. PIMPL pattern, which
+# this rule would otherwise flag for lacking m_), suppress at the declaration:
+#
+#   class Window {
+#       Uptr<Impl> impl; // NOLINT(readability-identifier-naming)
+#       ...
+#   };
+#
+# WarningsAsErrors left empty deliberately — flip individual checks to
+# -Werror equivalents at the CI level once you've cleared the existing
+# codebase, not globally from day one, or every legacy name will hard-fail.
+WarningsAsErrors: ''

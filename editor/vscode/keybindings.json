@@ -1,0 +1,170 @@
+// Place your key bindings in this file to override the defaults
+
+[
+    {
+        "key": "alt+/",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "mk\u000D"
+        },
+        "when": "terminalIsOpen"
+    },
+
+    {
+        "key": "alt+/",
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                "workbench.action.terminal.toggleTerminal",
+                {
+                    "command": "workbench.action.terminal.sendSequence",
+                    "args": {
+                        "text": "mk\u000D"
+                    }
+                }
+            ]
+        },
+        "when": "!terminalIsOpen"
+    },
+
+
+
+    // Focus terminal when editor is active
+    {
+        "key": "alt+.",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorTextFocus && !terminalFocus"
+    },
+    // Focus editor when not focused
+    {
+        "key": "alt+.",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!editorTextFocus"
+    },
+
+
+    {
+        "key": "up",
+        "command": "-workbench.action.terminal.hideSuggestWidgetAndNavigateHistory",
+        "when": "config.terminal.integrated.suggest.upArrowNavigatesHistory && terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible && !simpleSuggestWidgetHasNavigated || config.terminal.integrated.suggest.upArrowNavigatesHistory && terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible && !simpleSuggestWidgetHasNavigated"
+    },
+    {
+        "key": "ctrl+alt+/",
+        "command": "-workbench.action.chat.attach.instructions",
+        "when": "chatIsEnabled && config.chat.promptFiles"
+    },
+    {
+        "key": "alt+k",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "alt+l",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "alt+k",
+        "command": "-editor.action.accessibilityHelpConfigureKeybindings",
+        "when": "accessibilityHelpIsShown && accessibleViewHasUnassignedKeybindings"
+    },
+    {
+        "key": "alt+k",
+        "command": "-keybindings.editor.recordSearchKeys",
+        "when": "inKeybindings && inKeybindingsSearch"
+    },
+    {
+        "key": "alt+k",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.closeActiveEditor"
+    },
+
+    {
+        "key": "shift+alt+p",
+        "command": "editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+f8",
+        "command": "-editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "-workbench.action.terminal.toggleFindWholeWord",
+        "when": "terminalFindVisible && terminalHasBeenCreated || terminalFindVisible && terminalProcessSupported"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus || editorFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+a",
+        "command": "workbench.action.addRootFolder"
+    },
+    {
+        "key": "ctrl+alt+d",
+        "command": "editor.action.duplicateSelection"
+    },
+    {
+        "key": "alt+,",
+        "command": "C_Cpp.SwitchHeaderSource",
+        "when": "editorTextFocus && editorLangId =~ /^(c|(cuda-)?cpp)$/ && !(config.C_Cpp.intelliSenseEngine =~ /^[dD]isabled$/)"
+    },
+    {
+        "key": "alt+o",
+        "command": "-C_Cpp.SwitchHeaderSource",
+        "when": "editorTextFocus && editorLangId =~ /^(c|(cuda-)?cpp)$/ && !(config.C_Cpp.intelliSenseEngine =~ /^[dD]isabled$/)"
+    },
+    {
+        "key": "alt+f",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+space",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "alt+space",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+,",
+        "command": "clangd.switchheadersource",
+        "when": "editorTextFocus && resourceLangId == 'c' || editorTextFocus && resourceLangId == 'cpp' || editorTextFocus && resourceLangId == 'cuda-cpp' || editorTextFocus && resourceLangId == 'objective-c' || editorTextFocus && resourceLangId == 'objective-cpp'"
+    },
+    {
+        "key": "alt+o",
+        "command": "-clangd.switchheadersource",
+        "when": "editorTextFocus && resourceLangId == 'c' || editorTextFocus && resourceLangId == 'cpp' || editorTextFocus && resourceLangId == 'cuda-cpp' || editorTextFocus && resourceLangId == 'objective-c' || editorTextFocus && resourceLangId == 'objective-cpp'"
+    },
+    {
+        "key": "alt+.",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "alt+d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus"
+    }
+]

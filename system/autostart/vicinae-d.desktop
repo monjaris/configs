@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=vicinae-daemon
+Comment=
+GenericName=Launcher
+Categories=
+Exec=vicinae server --replace
+# Exec=vicinae server
+Icon=
+Terminal=false
+Type=Application

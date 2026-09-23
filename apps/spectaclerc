@@ -1,0 +1,23 @@
+[Annotations]
+annotationToolType=6
+arrowShadow=false
+freehandStrokeWidth=31
+
+[General]
+autoSaveImage=true
+clipboardGroup=PostScreenshotCopyImage
+
+[ImageSave]
+imageFilenameTemplate=ss-<yy>.<MM>.<dd>_<HH>:<mm>
+lastImageSaveAsLocation=file:///home/ziya/Pictures/Screenshots/ss-26.04.25_19:32.png
+lastImageSaveLocation=file:///home/ziya/Pictures/Screenshots/ss-26.09.23_13:34.png
+translatedScreenshotsFolder=Screenshots
+
+[VideoSave]
+preferredVideoFormat=2
+translatedScreencastsFolder=Screencasts
+
+[ViewerWindow]
+1745x1091 screen: Height=570
+1745x1091 screen: Width=861
+1745x1091 screen: Window-Maximized=true

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=krunner-daemon
+Comment=
+GenericName=Launcher
+Categories=
+Exec=krunner -d
+Icon=
+Terminal=false
+Type=Application

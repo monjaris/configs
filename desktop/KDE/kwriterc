@@ -1,0 +1,13 @@
+[General]
+Days Meta Infos=30
+Save Meta Infos=true
+Show Full Path in Title=false
+Show Menu Bar=false
+Show Status Bar=true
+Show Tab Bar=true
+Show Url Nav Bar=false
+
+[MainWindow]
+1745x1091 screen: Height=1013
+1745x1091 screen: Width=1735
+1745x1091 screen: Window-Maximized=true

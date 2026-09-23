@@ -1,0 +1,62 @@
+#!allow-sudo,allow-exec
+
+
+# Dependencies
+@exec 'sudo pacman -S --needed --noconfirm bash-completion'
+
+
+# Directories
+# --
+"~/.config/kitty"  >>*  "terminal/.."
+# --
+"~/.config/yay"  >>*  "system/.."
+"~/.config/autostart"  >>*  "system/.."
+"~/.config/bashrc.d"  >>*  "system/bash"
+"~/.bashrc"  >>  "system/bash/.."
+#
+@sudo "/etc/pacman.conf"  >>  "system/.."
+@sudo "/etc/keyd"  >>*  "system/.."
+# --
+"~/.config/kcminputrc" >> "desktop/plasma/.."
+"~/.config/kdeglobals" >> "desktop/plasma/.."
+"~/.config/plasma-shortcuts.kksrc" >> "desktop/plasma/.."
+# --
+"~/bin" >>* "utils/tools"
+"~/Templates/c++" >>* "utils/templates/c++"
+# --
+"~/.config/fastfetch"  >>*  "cli/.."
+"~/.config/bat"  >>*  "cli/.."
+"~/.config/yazi"  >>*  "cli/.."
+"~/.config/lazygit"  >>*  "cli/.."
+"~/.config/htop"  >>*  "cli/.."
+"~/.config/btop"  >>*  "cli/.."
+"~/.config/cava"  >>*  "cli/.."
+# --
+"~/.config/clang-tidy"  >>*  "dev/.."
+"~/.config/clangd"  >>*  "dev/.."
+# --
+"~/.config/fresh" >>* "editor/.."
+"~/.config/zed" >>* "editor/.."
+"~/.config/micro" >>* "editor/.."
+"~/.config/Code - OSS/User/keybindings.json"  >>  "editor/vscode/.."
+"~/.config/Code - OSS/User/settings.json"  >>  "editor/vscode/.."
+# --
+"~/.config/haruna" >>* "apps/.."
+"~/.config/harunarc" >> "apps/.."
+"~/.config/mpv" >>* "apps/.."
+"~/.config/spectaclerc" >> "apps/.."
+"~/.config/arkrc" >> "apps/.."
+"~/.config/dolphinrc" >> "apps/.."
+"~/.config/konsolerc" >> "apps/.."
+"~/.config/yakuakerc" >> "apps/.."
+"~/.config/kritashortcutsrc" >> "apps/.."
+"~/.config/drawyrc" >> "apps/.."
+"~/.config/elisarc" >> "apps/.."
+"~/.config/gwenviewrc" >> "apps/.."
+# --
+"~/.config/vicinae" >>* "launcher/.."
+"~/.config/krunnerrc" >> "launcher/.."
+
+
+# Special
+

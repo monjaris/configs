@@ -1,0 +1,8 @@
+id = "lake-dark"
+name = "Lake Dark"
+version = "0.1.0"
+schema_version = 1
+authors = ["Monjaris"]
+description = "A minimal, refined dark theme for better development flow."
+repository = "https://github.com/monjaris/monako"
+themes = ["themes/lake-dark.json"]

@@ -1,0 +1,386 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "bindings": {
+      "alt-/": [
+        "terminal::SendText",
+        "mk\n"
+      ]
+    }
+  },
+  {
+    "bindings": {
+      "alt-l": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-pagedown": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "bindings": {
+      "alt-k": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-pageup": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "bindings": {
+      "alt-o": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-alt-d": "editor::DuplicateLineDown"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-alt-shift-down": "editor::DuplicateLineDown"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-alt-shift-up": "editor::DuplicateLineUp"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-alt-shift-up": "editor::DuplicateLineUp"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-.": "editor::GoToHunk"
+    }
+  },
+  {
+    "bindings": {
+      "alt-.": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-`": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Terminal",
+    "unbind": {
+      "alt-.": [
+        "terminal::SendText",
+        "\u001b."
+      ]
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-q": "zed::Quit"
+    }
+  },
+  {
+    "unbind": {
+      "ctrl-q": "zed::Quit"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-r": "editor::FindAllReferences"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-shift-f12": "editor::FindAllReferences"
+    }
+  },
+  {
+    "bindings": {
+      "alt-;": "editor::SwitchSourceHeader"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-alt-n": "editor::ToggleLineNumbers"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-;": "editor::ToggleLineNumbers"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-d": "editor::GoToDefinition"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "f12": "editor::GoToDefinition"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-p": [
+        "editor::GoToDiagnostic",
+        {
+          "severity": {
+            "min": "hint",
+            "max": "error"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "f8": [
+        "editor::GoToDiagnostic",
+        {
+          "severity": {
+            "min": "hint",
+            "max": "error"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+      "bindings": {
+      "ctrl-;": "editor::ToggleBookmark"
+    }
+  },
+  {
+    "context": "AcpThread > Editor",
+    "unbind": {
+      "ctrl-;": "agent::OpenAddContextMenu"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-alt-:": "workspace::ClearBookmarks"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-alt-;": "editor::GoToNextBookmark"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-:": "editor::ViewBookmarks"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-,": "editor::GoToPreviousHunk"
+    }
+  },
+  {
+    "bindings": {
+      "alt-,": "project_symbols::Toggle"
+    }
+  },
+  {
+    "context": "AcpThread",
+    "unbind": {
+      "ctrl-alt-/": "agent::ToggleModelSelector"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-alt-/": "buffer_search::Deploy"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-k ctrl-i": "icon_theme_selector::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-\\": "pane::SplitRight"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-alt-enter": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-|": "editor::MoveToEnclosingBracket"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-\\": "editor::MoveToEnclosingBracket"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-m": "editor::MoveToEnclosingBracket"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-t": "editor::ToggleFold"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-k ctrl-l": "editor::ToggleFold"
+    }
+  },
+  {
+    "context": "!Terminal",
+    "unbind": {
+      "ctrl-shift-c": "collab_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-alt-left": "pane::SwapItemLeft"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-shift-pageup": "pane::SwapItemLeft"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-alt-right": "pane::SwapItemRight"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-shift-pagedown": "pane::SwapItemRight"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-alt-left": "editor::MoveToPreviousSubwordStart"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-alt-right": "editor::MoveToNextSubwordEnd"
+    }
+  },
+  {
+    "unbind": {
+      "shift-escape": "workspace::ToggleZoom"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-p": [
+        "editor::GoToPreviousDiagnostic",
+        {
+          "severity": {
+            "min": "hint",
+            "max": "error"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "shift-f8": [
+        "editor::GoToPreviousDiagnostic",
+        {
+          "severity": {
+            "min": "hint",
+            "max": "error"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "unbind": {
+      "enter": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "unbind": {
+      "enter": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "unbind": {
+      "enter": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "unbind": {
+      "enter": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-alt-shift-enter": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "unbind": {
+      "enter": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && showing_completions && false",
+    "bindings": {
+      "enter": "editor::ConfirmCompletion"
+    }
+  }
+]

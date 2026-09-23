@@ -1,0 +1,9 @@
+[Daemon]
+LockGrace=3
+Timeout=30
+
+[Greeter][Wallpaper][org.kde.image][General]
+DynamicMode=1
+Image=file:///usr/share/wallpapers/garuda-wallpapers/since-sgs.png
+PreviewImage=file:///usr/share/wallpapers/garuda-wallpapers/since-sgs.png
+SlidePaths=/usr/share/wallpapers/
