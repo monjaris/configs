@@ -1,4 +1,4 @@
-#!allow-sudo,allow-exec
+.#!allow-sudo,allow-exec
 
 
 # Dependencies
@@ -24,8 +24,8 @@
 "~/.config/bashrc.d"  >>*  "system/bash"
 "~/.bashrc"  >>  "system/bash/.."
 #
-@sudo "/etc/pacman.conf"  >>  "system/.."
 @sudo "/etc/keyd"  >>*  "system/.."
+@exec 'sudo systemctl enable --now keyd'
 # --
 "~/.config/kcminputrc" >> "desktop/plasma/.."
 "~/.config/kdeglobals" >> "desktop/plasma/.."
@@ -66,7 +66,3 @@
 # --
 "~/.config/vicinae" >>* "launcher/.."
 "~/.config/krunnerrc" >> "launcher/.."
-
-
-# Special
-
