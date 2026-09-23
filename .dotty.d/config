@@ -1,13 +1,16 @@
 .#!allow-sudo,allow-exec
 
 
-# Dependencies
+# DEPS
 @exec 'sudo pacman -S --needed --noconfirm vulkan-headers vulkan-intel'
 @exec 'sudo pacman -S --needed --noconfirm wl-clipboard'
 @exec 'sudo pacman -S --needed --noconfirm bash-completion'
 @exec 'sudo pacman -S --needed --noconfirm less'
 @exec 'sudo pacman -S --needed --noconfirm ugrep'
 @exec 'sudo pacman -S --needed --noconfirm eza'
+@exec 'sudo pacman -S --needed noto-fonts'
+@exec 'sudo pacman -S --needed inter-font'
+@exec 'sudo pacman -S --needed ttf-jetbrains-mono'
 @exec 'sudo pacman -S --needed kitty'
 @exec 'sudo pacman -S --needed brave'
 @exec 'sudo pacman -S --needed vicinae'
@@ -15,10 +18,8 @@
 @exec 'sudo pacman -S --needed zed'
 
 
-# Directories
-# --
-"~/.config/kitty"  >>*  "terminal/.."
-# --
+
+## system
 "~/.config/yay"  >>*  "system/.."
 "~/.config/autostart"  >>*  "system/.."
 "~/.config/bashrc.d"  >>*  "system/bash"
@@ -26,14 +27,20 @@
 #
 @sudo "/etc/keyd"  >>*  "system/.."
 @exec 'sudo systemctl enable --now keyd'
-# --
+
+## terminal
+"~/.config/kitty"  >>*  "terminal/.."
+
+# desktop
 "~/.config/kcminputrc" >> "desktop/plasma/.."
 "~/.config/kdeglobals" >> "desktop/plasma/.."
 "~/.config/plasma-shortcuts.kksrc" >> "desktop/plasma/.."
-# --
+
+# utils
 "~/bin" >>* "utils/tools"
 "~/Templates/c++" >>* "utils/templates/c++"
-# --
+
+# cli
 "~/.config/fastfetch"  >>*  "cli/.."
 "~/.config/bat"  >>*  "cli/.."
 "~/.config/yazi"  >>*  "cli/.."
@@ -41,16 +48,19 @@
 "~/.config/htop"  >>*  "cli/.."
 "~/.config/btop"  >>*  "cli/.."
 "~/.config/cava"  >>*  "cli/.."
-# --
+
+# dev
 "~/.config/clang-tidy"  >>*  "dev/.."
 "~/.config/clangd"  >>*  "dev/.."
-# --
+
+# editor
 "~/.config/fresh" >>* "editor/.."
 "~/.config/zed" >>* "editor/.."
 "~/.config/micro" >>* "editor/.."
 "~/.config/Code - OSS/User/keybindings.json"  >>  "editor/vscode/.."
 "~/.config/Code - OSS/User/settings.json"  >>  "editor/vscode/.."
-# --
+
+# apps
 "~/.config/haruna" >>* "apps/.."
 "~/.config/harunarc" >> "apps/.."
 "~/.config/mpv" >>* "apps/.."
@@ -63,6 +73,7 @@
 "~/.config/drawyrc" >> "apps/.."
 "~/.config/elisarc" >> "apps/.."
 "~/.config/gwenviewrc" >> "apps/.."
-# --
+
+# launcher
 "~/.config/vicinae" >>* "launcher/.."
 "~/.config/krunnerrc" >> "launcher/.."
