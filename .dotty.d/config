@@ -2,13 +2,17 @@
 
 
 # Dependencies
+@exec 'sudo pacman -S --needed --noconfirm vulkan-headers vulkan-intel'
+@exec 'sudo pacman -S --needed --noconfirm wl-clipboard'
 @exec 'sudo pacman -S --needed --noconfirm bash-completion'
 @exec 'sudo pacman -S --needed --noconfirm less'
 @exec 'sudo pacman -S --needed --noconfirm ugrep'
 @exec 'sudo pacman -S --needed --noconfirm eza'
 @exec 'sudo pacman -S --needed kitty'
+@exec 'sudo pacman -S --needed brave'
 @exec 'sudo pacman -S --needed vicinae'
 @exec 'sudo pacman -S --needed fresh-editor'
+@exec 'sudo pacman -S --needed zed'
 
 
 # Directories
