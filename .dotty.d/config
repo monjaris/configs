@@ -3,6 +3,9 @@
 
 # Dependencies
 @exec 'sudo pacman -S --needed --noconfirm bash-completion'
+@exec 'sudo pacman -S --needed kitty'
+@exec 'sudo pacman -S --needed ugrep'
+@exec 'sudo pacman -S --needed fresh-editor'
 
 
 # Directories
